@@ -10,19 +10,20 @@ class SessionController < ApplicationController
   def create
   	user = User.find_by_email(params[:email])
   	if user && user.authenticate(params[:password])
-  		@status = 'success-message'
   		session[:user_id] = user.id
   		redirect_to root_path, flash: { success: 'You are logged in!'}
   	else
-  		@status = 'error-message'
   		session[:user_id] = nil
-  		redirect_to login_path, flash: {error: 'Incorrect email or password'}
+      @test_message = 'test'
+  		redirect_to login_path, flash: { warning: 'Incorrect email or password'}
   	end
   end
 
   # DELETE
   # Delete from session
   def delete
+    session[:user_id] = nil
+    redirect_to root_path, flash: {notice: 'You are logged out.'}
   end
 
 

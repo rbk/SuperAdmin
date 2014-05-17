@@ -1,9 +1,5 @@
 <div id="login-form-wrap">
 	
-	<% if notice %>
-		<div class=""><%= notice %></div>
-	<% end %>
-
 	<%= form_tag session_create_path do %>
 		<div class="form-group">
 			<%= label :email, 'Email' %>
