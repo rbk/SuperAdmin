@@ -24,6 +24,18 @@ class ApplicationController < ActionController::Base
     @user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-  helper_method :current_user
+  def super_admin
+    if session[:user_id]
+      user = User.find(session[:user_id])
+      if user.group == 'superadmin'
+        @user = user
+      else
+        false
+      end
+    end
+  end
+
+
+  helper_method :current_user, :super_admin
 
 end

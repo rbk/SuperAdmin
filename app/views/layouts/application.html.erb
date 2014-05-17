@@ -7,12 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<% if session[:user_id] %>
-		<% current_user = User.find(session[:user_id]) %>
-		Current user id: <%= current_user.id %> <br>
-		Current user group: <%= current_user.group %>
-	<% end %>
-
 	<div class="container-fluid">
 		<div class="row">
 			<nav>
