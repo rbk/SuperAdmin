@@ -8,6 +8,7 @@
 </head>
 <body>
 <p style="color:red;font-weight:bold">User id: <%= session[:user_id] || 'Not Available' %></p>
+<%= render 'layouts/flash_messages' %>
 <%= yield %>
 
 </body>
