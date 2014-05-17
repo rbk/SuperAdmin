@@ -1,5 +1,7 @@
 <div id="login-form-wrap">
 	
+	<%= render 'layouts/flash_messages' %>
+
 	<%= form_tag session_create_path do %>
 		<div class="form-group">
 			<%= label :email, 'Email' %>

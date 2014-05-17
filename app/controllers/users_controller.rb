@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_access
+  before_action :authenticate_super_admin_access
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users

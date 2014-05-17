@@ -9,6 +9,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def authenticate_super_admin_access
+    authenticate_access
+    if !session[:user_id].nil?
+      if User.find( session[:user_id] ).group != 'superadmin'
+        redirect_to login_path, flash: { warning: 'User access level too low.' }
+      end
+    end
+  end
+
   private
 
   def current_user
