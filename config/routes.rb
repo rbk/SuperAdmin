@@ -1,6 +1,6 @@
 SuperAdmin::Application.routes.draw do
   
-  root 'users#index'
+  root 'session#new'
 
   get "/login" => 'session#new'
   post "session/create"
