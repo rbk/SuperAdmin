@@ -2,11 +2,25 @@ SuperAdmin::Application.routes.draw do
   
   root 'users#index'
 
-  get "/login" => 'session#new'
+  get "login" => 'session#new'
   post "session/create"
-  delete "session/delete"
+  get "logout" => "session#delete"
   
   resources :users
+  # resources :sessions
+
+
+  # get 'login' => 'session#new'
+  # post 'signin' => 'session#signin'
+  # delete 'signout' => 'session#signout'
+
+  # # post 'login' => 'users#authenticate'
+  # resources :sessions
+  # resources :users
+  # resources :subjects
+  # resources :questions do
+  #   resources :answers
+  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
