@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   	
   end
 
-
   private
 
   def current_user
