@@ -21,4 +21,10 @@ Just create a user from the rails console:
 
 > `User.create email: "your@email.com", password: "yourpass", password_confirmation: "yourpass", group: "superadmin"`
 
+## Rename App ##
+
+Run this command from the shell rename the app. Replace `<app_name>`
+with the name of your app.
+
+`find . -type f -print0 | xargs -0 sed -i 's/SuperAdmin/<app_name>/g'`
 
