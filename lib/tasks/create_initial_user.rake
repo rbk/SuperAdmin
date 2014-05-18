@@ -2,5 +2,13 @@
 
 desc "Create inital admin user."
 task :admin_create => :environment do
-	User.create( email: 'sample@someemail.com', password_digest: '', group: 'superadmin' )	
+	User.create( email: 'admin', password:"admin", password_confirmation: "admin", group: 'superadmin' )	
+	puts ""
+	puts "Admin user created!"
+	puts ""
+	puts "Username: admin"
+	puts "Password: admin"
+	puts ""
+	puts "Please edit this users name and password!"
+	puts ""
 end
