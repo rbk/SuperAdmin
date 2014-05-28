@@ -9,7 +9,7 @@ I added Bootstrap 3 on a wim. It can be ripped out fairly easily.
 ## Setup ##
 
 
-Run `rake admin_create` to create the inital admin user.
+Run `rake create_admin` to create the inital admin user.
 
 > username: admin
 

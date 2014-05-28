@@ -1,7 +1,7 @@
 # create_initial_user.rake
 
 desc "Create inital admin user."
-task :admin_create => :environment do
+task :create_admin => :environment do
 	User.create( email: 'admin', password:"admin", password_confirmation: "admin", group: 'superadmin' )	
 	puts ""
 	puts "Admin user created!"
