@@ -35,6 +35,11 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+group :development do
+	gem "hirb", "~> 0.7.1"
+	gem "awesome_print", "~> 1.2.0"
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
