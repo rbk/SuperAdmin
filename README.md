@@ -1,7 +1,7 @@
 ## Rails 4, Ruby 2 Starter app. ##
 
 We all usually need some kind of basic login system, so I've layed the groundwork
-here. This app uses the `has_secure_password` method. Beside the usual `current_user` helper method, I have added the a `super_admin` helper method.
+here. This app uses the `has_secure_password` method. Besides the usual `current_user` helper method, I have added a `super_admin` helper method.
 
 I added Bootstrap 3 on a wim. It can be ripped out fairly easily.
 
@@ -23,7 +23,7 @@ Just create a user from the rails console:
 
 ## Rename App ##
 
-Run this command from the shell rename the app. Replace `<app_name>`
+Run this command from the folder you cloned this repository in, to rename your application. Replace `<app_name>`
 with the name of your app.
 
 `find . -type f -print0 | xargs -0 sed -i 's/SuperAdmin/<app_name>/g'`
