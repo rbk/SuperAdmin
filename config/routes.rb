@@ -8,11 +8,11 @@ SuperAdmin::Application.routes.draw do
     confirmation:   'verification', 
     unlock:         'unblock', 
     registration:   'register', 
-    sign_up:        'cmon_let_me_in' 
+    sign_up:        '' 
   }
   resources :users
 
-  root :to => redirect("/login")
+  # root :to => redirect("/login")
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
