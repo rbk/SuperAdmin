@@ -35,11 +35,12 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.1.2'
+# gem 'bcrypt-ruby', '~> 3.1.2'
+
+gem 'devise'
 
 group :development do
 	gem "hirb", "~> 0.7.1"
-	gem "awesome_print", "~> 1.2.0"
 end
 
 # Use unicorn as the app server

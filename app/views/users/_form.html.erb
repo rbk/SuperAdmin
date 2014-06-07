@@ -1,6 +1,6 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger">
+    <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
@@ -11,24 +11,7 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :email %><br>
-    <%= f.text_field :email, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :password %><br>
-    <%= f.password_field :password, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :group %><br>
-    <%= f.select :group, ['superadmin', 'customer'], {}, :class => 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.submit 'Save', :class => 'btn btn-primary' %>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>
-<br>
