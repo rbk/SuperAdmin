@@ -1,13 +1,17 @@
 ## Rails 4, Ruby 2 Starter app. ##
 
-We all usually need some kind of basic login system, so I've layed the groundwork
-here. This app uses the `has_secure_password` method. Besides the usual `current_user` helper method, I have added a `super_admin` helper method.
-
-I added Bootstrap 3 on a wim. It can be ripped out fairly easily.
-
+Work in progress!
 
 ## Setup ##
 
+1. `git clone git@github.com:richardbejamin/superadmin.git`
+2. `cd superadmin`
+3. `bundle install`
+4. `rake db:migrate`
+
+
+
+**Note: after switching to devise this probably will not work:**
 
 Run `rake create_admin` to create the inital admin user.
 
