@@ -39,8 +39,7 @@ class ApplicationController < ActionController::Base
       end
     end
   end
-
-
+  
   helper_method :current_user, :super_admin
 
 end
