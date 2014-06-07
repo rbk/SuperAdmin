@@ -11,8 +11,8 @@ SuperAdmin::Application.routes.draw do
     sign_up:        'cmon_let_me_in' 
   }
   resources :users
-  
-  root :to => "devise/sessions#new"
+
+  root :to => redirect("/login")
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
