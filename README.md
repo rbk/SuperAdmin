@@ -31,4 +31,3 @@ Run this command from the folder you cloned this repository in, to rename your a
 with the name of your app.
 
 `find . -type f -print0 | xargs -0 sed -i 's/SuperAdmin/<app_name>/g'`
-
