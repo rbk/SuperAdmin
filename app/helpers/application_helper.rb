@@ -6,6 +6,7 @@ module ApplicationHelper
 			when :success then "alert alert-success"
 			when :error then "alert alert-danger"
 			when :warning then "alert alert-warning"
+			else "alert alert-warning"
 		end
 	end
 

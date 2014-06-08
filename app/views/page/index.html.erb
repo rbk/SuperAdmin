@@ -1,10 +1,13 @@
-<h1>Current user: <%= current_user.email %></h1>
-<h2>Sign in count: <%=current_user.sign_in_count %></h2>
-<h2>Date created: <%= current_user.created_at %></h2>
+<% if current_user %>
+<h1> &#10174; Current user: <%= current_user.email %></h1>
+<h2> &#10174; Sign in count: <%=current_user.sign_in_count %></h2>
+<h2> &#10174; Date created: <%= current_user.created_at %></h2>
 
-<h3>Current user object: </h3><%= current_user.inspect %>
+<h3> &#10174; Current user object: </h3><%= current_user.inspect %>
 
-<h1>Todos</h1>
+<h3> &#10174; User Session: <%= user_session %></h3>
+
+<h1> &#10174; Todos</h1>
 <ol>
 	
 	<li>Create accounts scaffold</li>
@@ -14,3 +17,8 @@
 	<li>create frontend views</li>
 	<li>Create embed code</li>
 </ol>
+<%= link_to 'Log out', destroy_user_session_path, method: 'delete' %>
+<% else %>
+<h1>Not logged in.</h1>
+<%= link_to 'Log in', new_user_session_path %>
+<% end %>
