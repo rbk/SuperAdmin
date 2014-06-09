@@ -12,3 +12,10 @@
  *= require_tree .
  */
  @import "bootstrap";
+
+
+ #error_explanation {
+ 	h2 {
+ 		margin-top: 0;
+ 	}
+ }
