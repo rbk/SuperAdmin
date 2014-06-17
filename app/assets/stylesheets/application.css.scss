@@ -14,8 +14,16 @@
  @import "bootstrap";
 
 
- #error_explanation {
- 	h2 {
- 		margin-top: 0;
- 	}
- }
+#error_explanation {
+	h2 {
+		margin-top: 0;
+	}
+}
+
+.form-group {
+		input[type="text"],
+		input[type="email"],
+		input[type="password"] {
+			@extend .form-control;
+		}
+}
