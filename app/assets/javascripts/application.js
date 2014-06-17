@@ -17,6 +17,4 @@
 // Loads all Bootstrap javascripts
 //= require bootstrap
 //= require_tree .
-
-console.log('Console Ready');
-$('h1,h2,h3,h4,h5,h6').prepend('&#8674;&nbsp;&nbsp;');
+console.log('Console ready.');

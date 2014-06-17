@@ -1,14 +1,3 @@
-<% if current_user %>
+Page#index.html.erb
 
-
-<h1>Current user: <%= current_user.email %></h1>
-<h2>Sign in count: <%=current_user.sign_in_count %></h2>
-<h2>Date created: <%= current_user.created_at.to_formatted_s(:long_ordinal) %></h2>
-<h3>Current user object: </h3><%= current_user.inspect %>
-<h3>User Session: <%= user_session %></h3>
-
-<%= link_to 'Log out', destroy_user_session_path, method: 'delete' %>
-<% else %>
-<h1>Not logged in.</h1>
-<%= link_to 'Log in', new_user_session_path %>
-<% end %>
+<small>Do something cool...</small>
