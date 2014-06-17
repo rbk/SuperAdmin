@@ -1,4 +1,6 @@
 module DeviseHelper
+
+  # Override devise error html
   def devise_error_messages!
     return "" if resource.errors.empty?
 
