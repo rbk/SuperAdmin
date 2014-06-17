@@ -25,9 +25,11 @@
 	    </div>
 	    <div class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav navbar-right">
-	        <!-- <li><a href="#">Dashboard</a></li> -->
-	        <!-- <li><a href="#">Settings</a></li> -->
-	        <!-- <li><a href="#">Profile</a></li> -->
+	      	<% if current_user %>
+	        <li><a href="#">Settings</a></li>
+	        <li><a href="#">Profile</a></li>
+	        <li><a href="#"><%= current_user.email %></a></li>
+	        <% end %>
 	      </ul>
 	    </div>
 	  </div>
@@ -39,7 +41,9 @@
 	      <ul class="nav nav-sidebar">
 	      	
 	        <%= sidebar_link 'Overview', root_path %>
-	        <%= sidebar_link('Embed Code', embed_path)%>
+	        <!-- <%= sidebar_link('Embed Code', embed_path)%> -->
+	        <%= sidebar_link 'Forms', forms_path %>
+	        <%= sidebar_link 'Transactions', transactions_path %>
 	        <%= sidebar_link 'Users', users_path %>
 
 	        <% if current_user %>
