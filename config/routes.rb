@@ -2,6 +2,7 @@ SuperAdmin::Application.routes.draw do
   
 
   get "page/index"
+  get 'embed' => "page#embed"
   devise_for :users, path: "/", path_names: { 
     sign_in:        'login', 
     sign_out:       'logout', 

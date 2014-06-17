@@ -44,8 +44,21 @@ body {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
+    // background-color: #f5f5f5;
+    background-color: rgba(0,0,0,.3);
+    border-right: 1px solid #555;
+  }
+}
+.sidebar {
+  li {
+    // border-bottom: 1px solid #000;
+    border-top: 1px solid #555;
+  }
+  li:first-child {
+    border-top: 0;
+  }
+  li:last-child {
+    border-bottom: 0;
   }
 }
 

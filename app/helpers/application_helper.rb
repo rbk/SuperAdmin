@@ -10,4 +10,12 @@ module ApplicationHelper
 		end
 	end
 
+	def sidebar_link name, path 
+		if current_page?(path)
+			return "<li class='active'><a href='#{path}'>#{name}</a></li>".html_safe
+		else
+			return "<li><a href='#{path}'>#{name}</a></li>".html_safe
+		end
+	end
+
 end

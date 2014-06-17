@@ -1,6 +1,17 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  # before_action :check_for_super_admin
+  # before_action :authenticate_admin!
+  # before_filter do 
+  #   redirect_to :new_user_session_path unless current_user && current_user.admin?
+  # end
+
+  def check_for_super_admin
+    if current_user.email != "richard.be.jamin@gmail.com1"
+      redirect_to '/'
+    end
+  end
 
   # GET /users
   # GET /users.json

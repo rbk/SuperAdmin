@@ -12,7 +12,10 @@
  *= require_tree .
  */
  @import "bootstrap";
-
+body {
+	background: url( black_lozenge.png ) 0 0;
+	color: #fff;
+}
 
 #error_explanation {
 	h2 {
