@@ -30,3 +30,8 @@ body {
 			@extend .form-control;
 		}
 }
+
+input[type=submit] {
+	@extend .btn;
+	@extend .btn-default;
+}

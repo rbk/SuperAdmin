@@ -7,4 +7,7 @@ class ApplicationController < ActionController::Base
     request.env['omniauth.origin'] || stored_location_for(resource) || root_path
   end
 
+
+
+
 end
