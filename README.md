@@ -10,14 +10,11 @@ Work in progress!
 4. `rake db:migrate`
 
 
-
-**Note: after switching to devise this probably will not work:**
-
 Run `rake create_admin` to create the inital admin user.
 
-> username: admin
+> username: admin@localhost.com
 
-> password: admin
+> password: admin123
 
 OR
 
@@ -31,3 +28,7 @@ Run this command from the folder you cloned this repository in, to rename your a
 with the name of your app.
 
 `find . -type f -print0 | xargs -0 sed -i 's/SuperAdmin/<app_name>/g'`
+
+## Notes ##
+
+- Be sure to change the SuperAdmin::Application.config.secret_key_base in config/initializers/secret_token.rb
