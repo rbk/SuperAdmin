@@ -3,14 +3,18 @@
 
 
 <% if current_user %>
+<h3>User Model</h3>
+<ul>
+	
+<li>Current user: <%= current_user.email %></li>
+<li>Sign in count: <%=current_user.sign_in_count %></li>
+<li>Date created: <%= current_user.created_at.to_formatted_s(:long_ordinal) %></li>
+<li>User Session: <%= user_session %></li>
+<% current_user.attributes.each do | k,v | %>
+	<li><strong><%= k %>:&nbsp;&nbsp;</strong><%= v %></li>
+<% end %>
 
-
-<h2>Current user: <%= current_user.email %></h2>
-<h2>Sign in count: <%=current_user.sign_in_count %></h2>
-<h2>Date created: <%= current_user.created_at.to_formatted_s(:long_ordinal) %></h2>
-<h3>Current user object: </h3><%= current_user.inspect %>
-<h3>User Session: <%= user_session %></h3>
-
+</ul>
 
 <% end %>
 
