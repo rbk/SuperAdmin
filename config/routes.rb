@@ -1,7 +1,6 @@
 SuperAdmin::Application.routes.draw do
   
 
-  get "page/index"
 
   devise_for :users, path: "/", path_names: { 
     sign_in:        'login', 
@@ -13,8 +12,8 @@ SuperAdmin::Application.routes.draw do
     sign_up:        '' 
   }
   resources :users
-
   root 'page#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

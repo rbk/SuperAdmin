@@ -1,20 +1,21 @@
-<h1>Overview</h1>
+<h1>index.html.erb</h1>
 
 
 
 <% if current_user %>
-<h3>User Model</h3>
-<ul>
-	
-<li>Current user: <%= current_user.email %></li>
-<li>Sign in count: <%=current_user.sign_in_count %></li>
-<li>Date created: <%= current_user.created_at.to_formatted_s(:long_ordinal) %></li>
-<li>User Session: <%= user_session %></li>
-<% current_user.attributes.each do | k,v | %>
-	<li><strong><%= k %>:&nbsp;&nbsp;</strong><%= v %></li>
-<% end %>
 
-</ul>
+	<h3>User Model</h3>
+	<ul>
+		
+	<li>Current user: <%= current_user.email %></li>
+	<li>Sign in count: <%=current_user.sign_in_count %></li>
+	<li>Date created: <%= current_user.created_at.to_formatted_s(:long_ordinal) %></li>
+	<li>User Session: <%= user_session %></li>
+	<% current_user.attributes.each do | k,v | %>
+		<li><strong><%= k %>:&nbsp;&nbsp;</strong><%= v %></li>
+	<% end %>
+
+	</ul>
 
 <% end %>
 

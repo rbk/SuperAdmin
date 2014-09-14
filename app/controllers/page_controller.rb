@@ -1,6 +1,7 @@
 class PageController < ApplicationController
-  def index
-  end
-  def embed
-  end
+  before_action :authenticate_user!
+
+	def index
+	end
+
 end

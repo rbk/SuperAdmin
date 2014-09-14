@@ -14,7 +14,5 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
-// Loads all Bootstrap javascripts
-//= require bootstrap
 //= require_tree .
 console.log('Console ready.');
